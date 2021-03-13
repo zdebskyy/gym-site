@@ -1,9 +1,19 @@
-import React from "react";
-import Layout from "../../components/Layout/Layout";
-import styles from "./Home.module.css";
-import NewsItem from "../../components/NewsItem/NewsItem";
+import React from 'react';
+import Layout from '../../components/Layout/Layout';
+import styles from './Home.module.css';
+import NewsItem from '../../components/NewsItem/NewsItem';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const Home = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
   return (
     <section className={styles.section}>
       <video src="video/gym.mp4" autoPlay loop muted />
@@ -20,11 +30,15 @@ const Home = () => {
           фізичній формі, Ви зможете відчути себе затишно як вдома і комфортно
           тренуватися в своє задоволення.
         </p>
-        <ul className={styles.newsContainer}>
+        <h2 className={styles.newsTitle}>Новини</h2>
+        <Slider {...settings}>
           <NewsItem />
           <NewsItem />
           <NewsItem />
-        </ul>
+          <NewsItem />
+          <NewsItem />
+          <NewsItem />
+        </Slider>
       </Layout>
     </section>
   );
