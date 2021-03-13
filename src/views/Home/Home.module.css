@@ -1,0 +1,28 @@
+.section {
+  background-color: #263238;
+  height: 100vh;
+}
+
+.title {
+  text-align: center;
+  font-size: 55px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.title span {
+  letter-spacing: 5px;
+}
+
+.description {
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 28px;
+  text-align: justify;
+}
+
+.newsContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
