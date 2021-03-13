@@ -1,6 +1,14 @@
 .section {
-  background-color: #263238;
+  /* background-color: #263238; */
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
   height: 100vh;
+}
+video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
 }
 
 .title {

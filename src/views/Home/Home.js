@@ -6,6 +6,12 @@ import NewsItem from "../../components/NewsItem/NewsItem";
 const Home = () => {
   return (
     <section className={styles.section}>
+      <video
+        src="video/JAY SAAB GYM MOTIVATION | Cinematic Gym Edit | DMT Cinema - 01 - 01.mp4"
+        autoPlay
+        loop
+        muted
+      />
       <Layout>
         <h1 className={styles.title}>
           СПОРТКЛУБ <span>"Дії "</span>
