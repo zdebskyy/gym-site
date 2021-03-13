@@ -1,12 +1,22 @@
-.header {
+.header{
+  background-color: #212121;
+  position: fixed;
+  width: 100%;
+}
+
+.container {
   display: flex;
   justify-content: space-between;
   padding: 25px 0;
 }
+
+
 .linkItem {
   margin-right: 22px;
   font-size: 16px;
   text-decoration: none;
+  color: #ffb300;
+  opacity: 0.6;
 }
 .linkItem:last-child {
   margin-right: 0;
