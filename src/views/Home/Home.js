@@ -23,7 +23,6 @@ const Home = () => {
           <NewsItem />
           <NewsItem />
           <NewsItem />
-          <NewsItem />
         </ul>
       </Layout>
     </section>

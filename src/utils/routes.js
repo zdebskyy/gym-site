@@ -14,7 +14,7 @@ export default [
     label: "Clubs",
     exact: true,
     component: lazy(() =>
-      import("../views/Clubs" /* webpackChunkName: "Keypad" */)
+      import("../views/Clubs/Clubs" /* webpackChunkName: "Keypad" */)
     ),
   },
   {
@@ -22,7 +22,7 @@ export default [
     label: "Prices",
     exact: true,
     component: lazy(() =>
-      import("../views/Prices" /* webpackChunkName: "Contacts" */)
+      import("../views/Prices/Prices" /* webpackChunkName: "Contacts" */)
     ),
   },
   {
@@ -30,16 +30,15 @@ export default [
     label: "Schedule",
     exact: true,
     component: lazy(() =>
-      import("../views/Schedule" /* webpackChunkName: "Register" */)
+      import("../views/Schedule/Schedule" /* webpackChunkName: "Register" */)
     ),
   },
-
   {
     path: "/photos",
     label: "Photos",
     exact: true,
     component: lazy(() =>
-      import("../views/Photos" /* webpackChunkName: "Profile" */)
+      import("../views/Photos/Photos" /* webpackChunkName: "Profile" */)
     ),
   },
   {
@@ -47,7 +46,7 @@ export default [
     label: "Team",
     exact: true,
     component: lazy(() =>
-      import("../views/Team" /* webpackChunkName: "Profile" */)
+      import("../views/Team/Team" /* webpackChunkName: "Profile" */)
     ),
   },
   {
@@ -55,7 +54,7 @@ export default [
     label: "Contacts",
     exact: true,
     component: lazy(() =>
-      import("../views/Contacts" /* webpackChunkName: "Profile" */)
+      import("../views/Contacts/Contacts" /* webpackChunkName: "Profile" */)
     ),
   },
 ];

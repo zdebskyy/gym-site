@@ -13,22 +13,22 @@ const Header = () => {
             <NavLink to="/" className={styles.linkItem}>
               Головна сторінка
             </NavLink>
-            <NavLink to="/" className={styles.linkItem}>
+            <NavLink to="/clubs" className={styles.linkItem}>
               Наші клуби
             </NavLink>
-            <NavLink to="/" className={styles.linkItem}>
+            <NavLink to="/prices" className={styles.linkItem}>
               Наші ціни
             </NavLink>
-            <NavLink to="/" className={styles.linkItem}>
+            <NavLink to="/schedule" className={styles.linkItem}>
               Розклад
             </NavLink>
-            <NavLink to="/" className={styles.linkItem}>
+            <NavLink to="/photos" className={styles.linkItem}>
               Фотогалерея
             </NavLink>
-            <NavLink to="/" className={styles.linkItem}>
+            <NavLink to="/team" className={styles.linkItem}>
               Наша команда
             </NavLink>
-            <NavLink to="/" className={styles.linkItem}>
+            <NavLink to="/contacts" className={styles.linkItem}>
               Наші контакти
             </NavLink>
           </nav>
