@@ -46,6 +46,7 @@ class Schedule extends Component {
   render() {
     const { club } = this.state;
     const schedule = getSchedule(club);
+    console.log(gyms);
 
     return (
       <section className={styles.container}>
@@ -54,50 +55,19 @@ class Schedule extends Component {
 
           <div className={styles.clubsContainer}>
             <ul className={styles.clubsList}>
-              <li className={styles.listItem}>
-                <NavLink
-                  to={{
-                    pathname: "/schedule",
-                    search: "?club=irpinska",
-                  }}
-                  className={styles.linkItem}
-                >
-                  Ірпінська 76
-                </NavLink>
-              </li>
-              <li className={styles.listItem}>
-                <NavLink
-                  to={{
-                    pathname: "/schedule",
-                    search: "?club=semashko",
-                  }}
-                  className={styles.linkItem}
-                >
-                  Семашко 13
-                </NavLink>
-              </li>
-              <li className={styles.listItem}>
-                <NavLink
-                  to={{
-                    pathname: "/schedule",
-                    search: "?club=koltsova",
-                  }}
-                  className={styles.linkItem}
-                >
-                  Кольцова 14
-                </NavLink>
-              </li>
-              <li className={styles.listItem}>
-                <NavLink
-                  to={{
-                    pathname: "/schedule",
-                    search: "?club=trx",
-                  }}
-                  className={styles.linkItem}
-                >
-                  Міні групи TRX
-                </NavLink>
-              </li>
+              {gyms.map((gym) => (
+                <li className={styles.listItem} key={gym.id}>
+                  <NavLink
+                    to={{
+                      pathname: "/schedule",
+                      search: `?club=${gym.club}`,
+                    }}
+                    className={styles.linkItem}
+                  >
+                    {gym.title}
+                  </NavLink>
+                </li>
+              ))}
             </ul>
 
             {schedule && (
