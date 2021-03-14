@@ -2,21 +2,23 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  position: relative;
+  /* position: relative; */
   top: 68px;
-  background-color: #263238;
+  background: linear-gradient(#141e30, #243b55);
+  /* background-image: url("/src/img/img5.png"); */
+  background-size: cover;
   color: white;
   width: 100%;
+  /* top: -10px; */
   /* height: 784px; */
   /* padding-bottom: 20px; */
-  height: calc(100vh - 68px);
+  height: calc(100vh);
 }
 
 .title {
   display: block;
   margin-top: 30px;
   margin-bottom: 30px;
-
 }
 
 .list {
@@ -28,4 +30,11 @@
 
 .listElement {
   margin-bottom: 10px;
+}
+
+.priceDataContainer {
+  display: flex;
+  justify-content: center;
+  height: 450px;
+  width: 380px;
 }
