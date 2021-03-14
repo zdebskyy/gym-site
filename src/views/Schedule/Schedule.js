@@ -4,7 +4,7 @@ import queryString from "query-string";
 import Layout from "../../components/Layout/Layout";
 import ScheduleImage from "../../components/ScheduleImage/ScheduleImage";
 import ScheduleMap from "../../components/ScheduleMap/ScheduleMap";
-import schedules from "../../utils/schedules";
+import gyms from "../../utils/gyms";
 
 import styles from "./Schedule.module.css";
 
@@ -12,7 +12,7 @@ const getClubFromProps = (props) =>
   queryString.parse(props.location.search).club;
 
 const getSchedule = (name) =>
-  name ? schedules.find((el) => el.club === name) : undefined;
+  name ? gyms.find((el) => el.club === name) : undefined;
 
 class Schedule extends Component {
   state = {
