@@ -7,6 +7,7 @@ import ScheduleMap from "../../components/ScheduleMap/ScheduleMap";
 import gyms from "../../utils/gyms";
 
 import styles from "./Schedule.module.css";
+import ScheduleInfo from "../../components/ScheduleInfo/ScheduleInfo";
 
 const getClubFromProps = (props) =>
   queryString.parse(props.location.search).club;
@@ -100,15 +101,22 @@ class Schedule extends Component {
             </ul>
 
             {schedule && (
-              <div className={styles.schedule}>
-                <h3 className={styles.scheduleTitle}>{schedule.title}</h3>
-                <ScheduleMap
-                  club={club}
-                  center={schedule.centerPosition}
-                  marker={schedule.marker}
-                />
-                <ScheduleImage src={schedule.src} />
-              </div>
+              <>
+                <div className={styles.schedule}>
+                  <h3 className={styles.scheduleTitle}>{schedule.title}</h3>
+                  <ScheduleMap
+                    club={club}
+                    center={schedule.centerPosition}
+                    marker={schedule.marker}
+                  />
+                  <ScheduleImage src={schedule.src} />
+                </div>
+
+                <div className={styles.gymInfo}>
+                  <h3 className={styles.scheduleTitle}>Інформація</h3>
+                  <ScheduleInfo schedule={schedule} />
+                </div>
+              </>
             )}
           </div>
         </Layout>

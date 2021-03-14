@@ -1,0 +1,12 @@
+.container {
+  margin: 25px 10px;
+  color: #fff;
+}
+
+.block {
+  margin-bottom: 10px;
+}
+
+.block:last-of-type {
+  margin-bottom: 0;
+}

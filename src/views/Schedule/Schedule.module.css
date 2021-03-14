@@ -1,5 +1,6 @@
 .container {
-  background-image: url("/src/img/img1.png");
+  /* background-image: url("/src/img/img1.png"); */
+  background: linear-gradient(#141e30, #243b55);
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
   background-size: cover;
   min-height: 100vh;
@@ -69,4 +70,17 @@
   color: #ffffff;
   font-weight: 700;
   margin-top: 20px;
+}
+
+.gymInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 200px;
+  min-height: 200px;
+  background-color: #263238;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+  opacity: 0.8;
 }
