@@ -1,8 +1,18 @@
 import React from "react";
 import styles from "./Team.module.css";
+import Layout from "../../components/Layout/Layout";
 
 const Team = () => {
-  return <div className={styles.container}>Team</div>;
+  return (
+    <>
+      <section className={styles.container}>
+        <Layout></Layout>
+      </section>
+      <section className={styles.container2}>
+        <Layout></Layout>
+      </section>
+    </>
+  );
 };
 
 export default Team;
