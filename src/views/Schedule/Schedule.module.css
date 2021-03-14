@@ -1,7 +1,8 @@
 .container {
-  background-image: url("/src/img/img1.png");
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
-  background-size: cover;
+  /* background-image: url("/src/img/img1.png"); */
+  background: linear-gradient(#141e30, #243b55);
+  /* box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+  background-size: cover; */
   min-height: 100vh;
   display: flex;
   /* align-items: center; */
@@ -30,24 +31,32 @@
   align-items: center;
 
   width: 250px;
-  height: 200px;
+  min-height: 200px;
   background-color: #263238;
   border-radius: 5px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
   opacity: 0.8;
 
   list-style: none;
+  padding: 20px 0;
+}
+
+.listItem {
+  width: 200px;
+  margin-bottom: 5px;
+}
+
+.listItem:last-of-type {
+  margin-bottom: 0;
 }
 
 .linkItem {
+  display: block;
+  text-align: center;
   font-size: 18px;
+  line-height: 40px;
   color: #ffffff;
   text-decoration: none;
-}
-
-.activeLinkItem {
-  background-color: coral;
-  border-radius: 5px;
 }
 
 .schedule {
@@ -69,4 +78,17 @@
   color: #ffffff;
   font-weight: 700;
   margin-top: 20px;
+}
+
+.gymInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 200px;
+  min-height: 200px;
+  background-color: #263238;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+  opacity: 0.8;
 }
