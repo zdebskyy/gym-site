@@ -30,7 +30,7 @@ export default [
     label: "Schedule",
     exact: true,
     component: lazy(() =>
-      import("../views/Schedule/Schedule" /* webpackChunkName: "Register" */)
+      import("../views/Schedule/Schedule" /* webpackChunkName: "Schedule" */)
     ),
   },
   {
