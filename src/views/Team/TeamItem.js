@@ -19,7 +19,7 @@ const TeamItem = ({ team }) => {
       ) : (
         <div className={styles.desc}>
           <CSSTransition in={!open} timeout={200} classNames="my-node">
-            <span className={styles.span}>"GOODBAY"</span>
+            <span>"GOODBAY"</span>
           </CSSTransition>
         </div>
       )}
