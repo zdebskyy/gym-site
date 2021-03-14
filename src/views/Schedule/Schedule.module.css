@@ -4,7 +4,8 @@
   background-size: cover;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
+  padding-top: 100px;
 }
 
 .sectionTitle {

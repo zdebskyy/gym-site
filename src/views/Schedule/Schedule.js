@@ -10,11 +10,11 @@ const getClubFromProps = (props) =>
 
 class Schedule extends Component {
   state = {
-    club: "",
+    club: undefined,
   };
 
   componentDidMount() {
-    this.props.history.push({
+    this.props.history.replace({
       search: "club=irpinska",
     });
     this.setState({ club: "irpinska" });
