@@ -1,19 +1,10 @@
 import React from "react";
-import schedules from "../../utils/schedules";
 import css from "./ScheduleImage.module.css";
 
-const getSrcByName = (name) => {
-  return schedules.find((el) => el.club === name).src;
-};
-
-const ScheduleImage = ({ club = "irpinska" }) => {
+const ScheduleImage = ({ src }) => {
   return (
     <div className="ScheduleWrapper">
-      <img
-        src={getSrcByName(club)}
-        alt={`${club} club schedule`}
-        className={css.image}
-      />
+      <img src={src} alt="" className={css.image} />
     </div>
   );
 };

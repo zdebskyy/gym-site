@@ -3,10 +3,16 @@ import { NavLink } from "react-router-dom";
 import queryString from "query-string";
 import Layout from "../../components/Layout/Layout";
 import ScheduleImage from "../../components/ScheduleImage/ScheduleImage";
+import ScheduleMap from "../../components/ScheduleMap/ScheduleMap";
+import schedules from "../../utils/schedules";
+
 import styles from "./Schedule.module.css";
 
 const getClubFromProps = (props) =>
   queryString.parse(props.location.search).club;
+
+const getSchedule = (name) =>
+  name ? schedules.find((el) => el.club === name) : undefined;
 
 class Schedule extends Component {
   state = {
@@ -14,6 +20,13 @@ class Schedule extends Component {
   };
 
   componentDidMount() {
+    const club = getClubFromProps(this.props);
+
+    if (club) {
+      this.setState({ club });
+      return;
+    }
+
     this.props.history.replace({
       search: "club=irpinska",
     });
@@ -29,15 +42,9 @@ class Schedule extends Component {
     }
   }
 
-  // onClubChange = (clubName) => {
-  //   this.props.history.push({
-  //     pathname: this.props.location.pathname,
-  //     search: `club=${clubName}`,
-  //   });
-  // };
-
   render() {
     const { club } = this.state;
+    const schedule = getSchedule(club);
 
     return (
       <section className={styles.container}>
@@ -92,9 +99,17 @@ class Schedule extends Component {
               </li>
             </ul>
 
-            <div className={styles.schedule}>
-              <ScheduleImage club={club} />
-            </div>
+            {schedule && (
+              <div className={styles.schedule}>
+                <h3 className={styles.scheduleTitle}>{schedule.title}</h3>
+                <ScheduleMap
+                  club={club}
+                  center={schedule.centerPosition}
+                  marker={schedule.marker}
+                />
+                <ScheduleImage src={schedule.src} />
+              </div>
+            )}
           </div>
         </Layout>
       </section>
