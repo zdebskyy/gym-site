@@ -1,15 +1,18 @@
 import React from "react";
 import styles from "./Team.module.css";
 import Layout from "../../components/Layout/Layout";
+import TeamItem from "./TeamItem";
 
 const Team = () => {
   return (
     <>
       <section className={styles.container}>
-        <Layout></Layout>
-      </section>
-      <section className={styles.container2}>
-        <Layout></Layout>
+        <Layout>
+          <div className={styles.teamContainer}>
+            <TeamItem team={"firstTeam"} />
+            <TeamItem team={"secondTeam"} />
+          </div>
+        </Layout>
       </section>
     </>
   );

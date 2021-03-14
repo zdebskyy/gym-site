@@ -1,0 +1,43 @@
+.firstTeam {
+  width: 300px;
+  height: 400px;
+  background-color: seagreen;
+  transition: all 1s ease-in-out;
+  border-radius: 5px;
+}
+
+.secondTeam {
+  width: 300px;
+  height: 400px;
+  background-color: seagreen;
+  transition: all 1s ease-in-out;
+  border-radius: 5px;
+}
+
+.rotate {
+  width: 300px;
+  height: 400px;
+  background-color: skyblue;
+  transform: rotateY(180deg);
+  transition: all 1s ease-in-out;
+  border-radius: 5px;
+}
+
+.desc {
+  transform: rotateY(180deg);
+}
+
+.my-node-enter {
+  opacity: 0;
+}
+.my-node-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.my-node-exit {
+  opacity: 1;
+}
+.my-node-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
