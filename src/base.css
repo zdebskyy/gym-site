@@ -21,3 +21,7 @@ a {
 .slick-dots li button:before {
   color: #ffff !important;
 }
+
+.slick-slide div {
+  margin: 0 auto;
+}
