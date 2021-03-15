@@ -1,26 +1,31 @@
 .container {
-  background: linear-gradient(#141e30, #243b55);
-  background-size: cover;
-  min-height: 100vh;
   display: flex;
   align-items: center;
+
+  background: linear-gradient(#141e30, #243b55);
+  background-size: cover;
+
+  min-height: 100vh;
   padding-top: 100px;
 }
 
 .sectionTitle {
   text-align: center;
-  font-size: 55px;
+  font-size: 30px;
   color: #ffffff;
   font-weight: 700;
+
   margin-bottom: 15px;
 }
 
 .clubsContainer {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
 }
 
+/* LIST OF CLUBS */
 .clubsList {
   display: flex;
   flex-direction: column;
@@ -28,15 +33,16 @@
   flex-wrap: wrap;
   align-items: center;
 
-  width: 250px;
-  min-height: 200px;
   background-color: #263238;
   border-radius: 5px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
   opacity: 0.8;
 
   list-style: none;
+  width: 350px;
+  min-height: 200px;
   padding: 20px 0;
+  margin-bottom: 20px;
 }
 
 .listItem {
@@ -57,23 +63,29 @@
   text-decoration: none;
 }
 
-.schedule {
+/* MAP and SCHEDULE wrapper */
+
+.scheduleWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 700px;
-  min-height: 200px;
+
   background-color: #263238;
   border-radius: 5px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
   opacity: 0.8;
+
+  width: 350px;
+  min-height: 200px;
+  margin-bottom: 20px;
 }
 
 .scheduleTitle {
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
   color: #ffffff;
   font-weight: 700;
+
   margin-top: 20px;
 }
 
@@ -82,10 +94,88 @@
   flex-direction: column;
   align-items: center;
 
-  width: 200px;
+  width: 350px;
   min-height: 200px;
+  margin-bottom: 20px;
+
   background-color: #263238;
   border-radius: 5px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
   opacity: 0.8;
+}
+
+@media screen and (min-width: 768px) {
+  .scheduleTitle {
+    font-size: 25px;
+  }
+
+  .clubsContainer {
+    width: 700px;
+    flex-wrap: wrap;
+  }
+
+  .clubsList {
+    width: 100%;
+    min-height: auto;
+
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    padding: 5px 0;
+  }
+  .listItem {
+    margin: 0;
+    width: 125px;
+  }
+
+  .scheduleWrapper {
+    width: 700px;
+  }
+
+  .gymInfo {
+    width: 700px;
+    min-height: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sectionTitle {
+    font-size: 55px;
+  }
+
+  .clubsContainer {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .clubsList {
+    width: 100%;
+    min-height: auto;
+
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    padding: 5px 0;
+  }
+
+  .clubsContainer {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .scheduleWrapper {
+    width: 760px;
+    margin-bottom: 0;
+  }
+
+  .scheduleTitle {
+    font-size: 25px;
+  }
+
+  .gymInfo {
+    width: 420px;
+    margin-bottom: 0;
+    min-height: auto;
+  }
 }

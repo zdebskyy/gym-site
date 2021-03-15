@@ -1,0 +1,19 @@
+.mapWrapper {
+  margin-top: 25px;
+  width: 320px;
+  height: 260px;
+}
+
+@media screen and (min-width: 768px) {
+  .mapWrapper {
+    width: 600px;
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .mapWrapper {
+    width: 600px;
+    height: 400px;
+  }
+}
