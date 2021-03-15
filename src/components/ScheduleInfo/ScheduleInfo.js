@@ -2,43 +2,52 @@ import React from "react";
 import css from "./ScheduleInfo.module.css";
 
 const ScheduleInfo = ({ schedule }) => {
-  console.log(schedule);
-  const { address, workTime, gymInfo, gymAdditionalInfo = [] } = schedule;
+  // console.log(schedule);
+  const { address, workTime, gymInfo, gymAdditionalInfo } = schedule;
 
   return (
-    <div className={css.container}>
+    <section className={css.container}>
       {address && (
-        <div className={css.block}>
-          <h4>Адреса:</h4>
+        <div className={css.infoBlock}>
+          <h4 className={css.blockTitle}>Наша адреса:</h4>
           {address.map((el) => (
-            <p key={el}>{el}</p>
+            <p key={el} className={css.blockText}>
+              {el}
+            </p>
           ))}
         </div>
       )}
       {workTime && (
-        <div className={css.block}>
-          <h4>Режим роботи:</h4>
+        <div className={css.infoBlock}>
+          <h4 className={css.blockTitle}>Режим роботи:</h4>
           {workTime.map((el) => (
-            <p key={el}>{el}</p>
+            <p key={el} className={css.blockText}>
+              {el}
+            </p>
           ))}
         </div>
       )}
       {gymInfo && (
-        <div className={css.block}>
-          <h4>Зали:</h4>
+        <div className={css.infoBlock}>
+          <h4 className={css.blockTitle}>Зали:</h4>
           {gymInfo.map((el) => (
-            <p key={el}>{el}</p>
+            <p key={el} className={css.blockText}>
+              {el}
+            </p>
           ))}
         </div>
       )}
       {gymAdditionalInfo && (
-        <div className={css.block}>
+        <div className={css.infoBlock}>
+          <h4 className={css.blockTitle}>Додатково:</h4>
           {gymAdditionalInfo.map((el) => (
-            <p key={el}>{el}</p>
+            <p key={el} className={css.blockText}>
+              {el}
+            </p>
           ))}
         </div>
       )}
-    </div>
+    </section>
   );
 };
 

@@ -3,7 +3,7 @@ import css from "./ScheduleImage.module.css";
 
 const ScheduleImage = ({ src }) => {
   return (
-    <div className="ScheduleWrapper">
+    <div className={css.container}>
       <img src={src} alt="" className={css.image} />
     </div>
   );
