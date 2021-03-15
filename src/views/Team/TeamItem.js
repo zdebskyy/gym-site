@@ -14,13 +14,9 @@ const TeamItem = ({ team }) => {
       className={classNames(open ? styles[team] : styles.rotate)}
       onClick={onRotate}
     >
-      {open ? (
-        "HELLO"
-      ) : (
+      {!open && (
         <div className={styles.desc}>
-          <CSSTransition in={!open} timeout={200} classNames="my-node">
-            <span>"GOODBAY"</span>
-          </CSSTransition>
+          <span>"GOODBYE"</span>
         </div>
       )}
     </div>

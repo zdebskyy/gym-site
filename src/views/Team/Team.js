@@ -7,6 +7,7 @@ const Team = () => {
   return (
     <>
       <section className={styles.container}>
+        <h2 className={styles.teamTitle}>Наша команда</h2>
         <Layout>
           <div className={styles.teamContainer}>
             <TeamItem team={"firstTeam"} />

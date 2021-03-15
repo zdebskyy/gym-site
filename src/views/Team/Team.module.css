@@ -7,10 +7,15 @@
 .teamContainer {
   width: 1100px;
   height: 900px;
-  background-color: salmon;
+  /* background-color: salmon; */
   opacity: 0.5;
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.teamTitle{
+  font-size: 44px;
+  
 }
