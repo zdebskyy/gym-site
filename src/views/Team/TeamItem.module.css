@@ -1,43 +1,56 @@
 .firstTeam {
   width: 300px;
   height: 400px;
-  background-color: seagreen;
   transition: all 1s ease-in-out;
   border-radius: 5px;
+  background-image: url(../../img/img1.png);
+  background-position: center;
+  background-size: cover;
+  opacity: 0.9;
+
 }
 
 .secondTeam {
   width: 300px;
   height: 400px;
-  background-color: seagreen;
   transition: all 1s ease-in-out;
   border-radius: 5px;
+  background-image: url(../../img/img2.png);
+  background-position: center;
+  background-size: cover;
+  opacity: 0.9;
 }
 
 .rotate {
   width: 300px;
   height: 400px;
-  background-color: skyblue;
-  transform: rotateY(180deg);
   transition: all 1s ease-in-out;
   border-radius: 5px;
+  animation-duration: 1s;
+  background-color: #263238;
+  
+}
+.desc{
+  
+}
+span{
+  color: white;
+  font-size: 18px;
+  animation-duration: 2s;
+  animation-name: slidein;
 }
 
-.desc {
-  transform: rotateY(180deg);
-}
+ @keyframes slidein { 
+  from {
+    opacity: 0;
+    margin-left: 100%;
+    width: 300%;
+  }
 
-.my-node-enter {
-  opacity: 0;
-}
-.my-node-enter-active {
-  opacity: 1;
-  transition: opacity 200ms;
-}
-.my-node-exit {
-  opacity: 1;
-}
-.my-node-exit-active {
-  opacity: 0;
-  transition: opacity 200ms;
-}
+  to {
+    opacity: 1;
+    margin-left: 0%;
+    width: 100%;
+  }
+} 
+
