@@ -22,6 +22,7 @@ class Schedule extends Component {
 
   componentDidMount() {
     const club = getClubFromProps(this.props);
+    console.log("schedule. club:", club);
 
     if (club) {
       this.setState({ club });
@@ -37,8 +38,10 @@ class Schedule extends Component {
   componentDidUpdate(prevProps) {
     const prevClub = getClubFromProps(prevProps);
     const nextClub = getClubFromProps(this.props);
+    // console.log("schedule. prevClub:", prevClub);
+    // console.log("schedule. nextClub:", nextClub);
 
-    if (prevClub !== nextClub) {
+    if (prevClub !== nextClub && nextClub) {
       this.setState({ club: nextClub });
     }
   }
@@ -46,10 +49,10 @@ class Schedule extends Component {
   render() {
     const { club } = this.state;
     const schedule = getSchedule(club);
-    console.log(gyms);
+    // console.log(gyms);
 
     return (
-      <section className={styles.container}>
+      <article className={styles.container}>
         <Layout>
           <h2 className={styles.sectionTitle}>Наші клуби</h2>
 
@@ -72,25 +75,27 @@ class Schedule extends Component {
 
             {schedule && (
               <>
-                <div className={styles.schedule}>
+                <section className={styles.scheduleWrapper}>
                   <h3 className={styles.scheduleTitle}>{schedule.title}</h3>
+
                   <ScheduleMap
                     club={club}
                     center={schedule.centerPosition}
                     marker={schedule.marker}
                   />
-                  <ScheduleImage src={schedule.src} />
-                </div>
 
-                <div className={styles.gymInfo}>
+                  <ScheduleImage src={schedule.src} />
+                </section>
+
+                <section className={styles.gymInfo}>
                   <h3 className={styles.scheduleTitle}>Інформація</h3>
                   <ScheduleInfo schedule={schedule} />
-                </div>
+                </section>
               </>
             )}
           </div>
         </Layout>
-      </section>
+      </article>
     );
   }
 }
