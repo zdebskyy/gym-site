@@ -15,8 +15,7 @@
 
 .teamTitle {
   text-align: center;
-  /* -webkit-text-stroke: rgb(0, 0, 0);
-  -webkit-text-stroke-width: 1px; */
+  color: #263238;
   font-size: 55px;
   margin-bottom: 50px;
 }

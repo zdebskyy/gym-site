@@ -23,13 +23,19 @@ const Team = () => {
 
             <TabPanel>
               <div className={styles.teamContainer}>
-                <TeamItem team={"firstTeam"} description={description[0]} />
-                <TeamItem team={"secondTeam"} />
-                <TeamItem team={"secondTeam"} />
+                <TeamItem team={"item1"} description={description[0]} />
+                <TeamItem team={"item2"} />
+                <TeamItem team={"item2"} />
               </div>
             </TabPanel>
             <TabPanel>
               <h2>Any content 2</h2>
+            </TabPanel>
+            <TabPanel>
+              <h2>Any content 3</h2>
+            </TabPanel>
+            <TabPanel>
+              <h2>Any content 4</h2>
             </TabPanel>
           </Tabs>
         </Layout>
