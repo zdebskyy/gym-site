@@ -25,7 +25,7 @@ const Team = () => {
               <div className={styles.teamContainer}>
                 <TeamItem team={"item1"} description={description[0]} />
                 <TeamItem team={"item2"} />
-                <TeamItem team={"item2"} />
+                <TeamItem team={"item3"} />
               </div>
             </TabPanel>
             <TabPanel>
