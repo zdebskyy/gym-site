@@ -1,6 +1,6 @@
 .section {
   /* background-color: #263238; */
-  /* box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4); */
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
   min-height: 100vh;
   display: flex;
   flex-direction: column;

@@ -3,6 +3,8 @@ import styles from "./Team.module.css";
 import Layout from "../../components/Layout/Layout";
 import TeamItem from "./TeamItem";
 import description from "../../db/description.json";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 
 const Team = () => {
   console.log(description);
@@ -11,10 +13,25 @@ const Team = () => {
       <section className={styles.container}>
         <h2 className={styles.teamTitle}>Наша команда</h2>
         <Layout>
-          <div className={styles.teamContainer}>
-            <TeamItem team={"firstTeam"} description={description[0]} />
-            <TeamItem team={"secondTeam"} />
-          </div>
+          <Tabs>
+            <TabList>
+              <Tab>Ірпінська 76</Tab>
+              <Tab>Семашко 13</Tab>
+              <Tab>Кольцова 14</Tab>
+              <Tab>Семашко 8а</Tab>
+            </TabList>
+
+            <TabPanel>
+              <div className={styles.teamContainer}>
+                <TeamItem team={"firstTeam"} description={description[0]} />
+                <TeamItem team={"secondTeam"} />
+                <TeamItem team={"secondTeam"} />
+              </div>
+            </TabPanel>
+            <TabPanel>
+              <h2>Any content 2</h2>
+            </TabPanel>
+          </Tabs>
         </Layout>
       </section>
     </>
