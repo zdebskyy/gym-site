@@ -52,27 +52,3 @@
   font-size: 18px;
   color: #ffffff;
 }
-
-@media screen and (max-width: 767px) {
-  .container {
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    padding-top: 100px;
-  }
-  .contactsBox {
-    width: 100%;
-    flex-direction: column;
-  }
-  .address {
-    width: 380px;
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-  .socialLinks {
-    font-size: 16px;
-  }
-  .phones {
-    font-size: 16px;
-  }
-}
