@@ -15,7 +15,6 @@ const Photos = () => {
               <Tab>Ірпінська 76</Tab>
               <Tab>Семашко 13</Tab>
               <Tab>Кольцова 14</Tab>
-              <Tab>Семашко 8а</Tab>
             </TabList>
 
             <TabPanel>
@@ -31,11 +30,6 @@ const Photos = () => {
             <TabPanel>
               <div className={styles.photosContainer}>
                 <h2>Any content 3</h2>
-              </div>
-            </TabPanel>
-            <TabPanel>
-              <div className={styles.photosContainer}>
-                <h2>Any content 4</h2>
               </div>
             </TabPanel>
           </Tabs>
