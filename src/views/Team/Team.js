@@ -26,6 +26,12 @@ const Team = () => {
                 <TeamItem team={"item1"} description={description[0]} />
                 <TeamItem team={"item2"} />
                 <TeamItem team={"item3"} />
+                <TeamItem team={"item1"} description={description[0]} />
+                <TeamItem team={"item1"} description={description[0]} />
+                <TeamItem team={"item1"} description={description[0]} />
+                <TeamItem team={"item1"} description={description[0]} />
+                <TeamItem team={"item1"} description={description[0]} />
+                <TeamItem team={"item1"} description={description[0]} />
               </div>
             </TabPanel>
             <TabPanel>
