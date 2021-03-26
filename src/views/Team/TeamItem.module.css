@@ -9,6 +9,11 @@
   opacity: 0.8;
   cursor: pointer;
 }
+.item1:hover {
+  transition: all 500ms ease-in-out;
+  transform: scale(1.03);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
 
 .item2 {
   composes: item1;
