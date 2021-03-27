@@ -4,6 +4,7 @@ import Layout from "../../components/Layout/Layout";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import EmailIcon from "@material-ui/icons/Email";
+import TelegramIcon from "@material-ui/icons/Telegram";
 
 const Contacts = () => {
   return (
@@ -38,18 +39,18 @@ const Contacts = () => {
             </p>
           </div>
           <div className={styles.socialMedia}>
-            <p className={styles.socialLinks}>
+            <a href="mailto:info@dii.com.ua" className={styles.socialLinkMail}>
               <div className={styles.icon}>
                 <EmailIcon fontSize="medium" />
               </div>{" "}
               e-mail: info@dii.com.ua
-            </p>
+            </a>
 
             <a
               href="https://www.facebook.com/SportclubDii"
               target="_blank"
               rel="noreferrer"
-              className={styles.socialLinks}
+              className={styles.socialLinkFacebook}
             >
               <div className={styles.icon}>
                 <FacebookIcon fontSize="medium" />
@@ -61,12 +62,23 @@ const Contacts = () => {
               href="https://www.instagram.com/sportclubdii/"
               target="_blank"
               rel="noreferrer"
-              className={styles.socialLinks}
+              className={styles.socialLinkInstagram}
             >
               <div className={styles.icon}>
                 <InstagramIcon fontSize="medium" />
               </div>
-              https://www.instagram.com/sportclubdii/
+              www.instagram.com/sportclubdii/
+            </a>
+            <a
+              href="https://t.me/sportclubdii"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.socialLinkTelegram}
+            >
+              <div className={styles.icon}>
+                <TelegramIcon fontSize="medium" />
+              </div>
+              t.me/sportclubdii
             </a>
           </div>
         </div>
@@ -76,3 +88,5 @@ const Contacts = () => {
 };
 
 export default Contacts;
+
+//t.me/sportclubdii
