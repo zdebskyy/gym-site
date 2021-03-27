@@ -18,16 +18,14 @@
 
 .contactsBox {
   margin: 0 auto;
-  width: 800px;
-
-  border-radius: 5px;
+  width: 920px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .address {
-  width: 380px;
+  width: 420px;
   height: 170px;
   margin-right: 50px;
   background-color: #263238;
@@ -38,13 +36,21 @@
   align-items: center;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
 }
+
+.icon {
+  margin-left: 26px;
+  margin-right: 10px;
+}
 .socialMedia {
   composes: address;
   margin-right: 0;
 }
 
 .socialLinks {
-  display: block;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
   font-size: 18px;
   color: #ffffff;
 }

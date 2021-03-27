@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import styles from "./Contacts.module.css";
 import Layout from "../../components/Layout/Layout";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import EmailIcon from "@material-ui/icons/Email";
 
 const Contacts = () => {
   return (
@@ -35,21 +38,34 @@ const Contacts = () => {
             </p>
           </div>
           <div className={styles.socialMedia}>
-            <p className={styles.socialLinks}>E-mail: info@dii.com.ua</p>
+            <p className={styles.socialLinks}>
+              <div className={styles.icon}>
+                <EmailIcon fontSize="medium" />
+              </div>{" "}
+              e-mail: info@dii.com.ua
+            </p>
+
             <a
               href="https://www.facebook.com/SportclubDii"
               target="_blank"
               rel="noreferrer"
               className={styles.socialLinks}
             >
+              <div className={styles.icon}>
+                <FacebookIcon fontSize="medium" />
+              </div>{" "}
               www.facebook.com/SportclubDii
             </a>
+
             <a
               href="https://www.instagram.com/sportclubdii/"
               target="_blank"
               rel="noreferrer"
               className={styles.socialLinks}
             >
+              <div className={styles.icon}>
+                <InstagramIcon fontSize="medium" />
+              </div>
               https://www.instagram.com/sportclubdii/
             </a>
           </div>
