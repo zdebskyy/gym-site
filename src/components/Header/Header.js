@@ -1,14 +1,19 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import styles from "./Header.module.css";
-import Layout from "../Layout/Layout";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import styles from './Header.module.css';
+import Layout from '../Layout/Layout';
+import logo from '../../img/logo.png';
 
 const Header = () => {
   return (
     <header className={styles.header}>
       <Layout>
         <div className={styles.container}>
-          <div>LOGO</div>
+          <div className={styles.logoContainer}>
+            <NavLink to="/">
+              <img src={logo} alt="logo"></img>
+            </NavLink>
+          </div>
           <div>
             <nav>
               <NavLink to="/" className={styles.linkItem}>
@@ -31,7 +36,9 @@ const Header = () => {
               </NavLink>
             </nav>
           </div>
-          <div>Зателефонуйте нам</div>
+          <a href="" className={styles.phoneUsBtn}>
+            Зателефонуйте нам
+          </a>
         </div>
       </Layout>
     </header>
