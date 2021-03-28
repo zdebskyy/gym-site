@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
+import css from "./ScheduleMap.module.css";
 
 const googleMapsApiKey = "AIzaSyA0C9IRhYtv95emD4pNB_X3X3J629nXYt0";
 
 const mapStyles = {
   position: "relative",
-  width: 600,
-  height: 400,
+  width: "100%",
+  height: "100%",
 };
 
 const containerStyle = {
@@ -21,8 +22,9 @@ class ScheduleMap extends Component {
     marker: this.props.marker,
   };
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps, prevState) {
     const { center, marker } = this.props;
+
     if (prevProps.center !== center) {
       this.setState({ center, marker });
     }
@@ -33,17 +35,17 @@ class ScheduleMap extends Component {
     const { center, marker } = this.state;
 
     return (
-      <div style={{ marginTop: 25 }}>
+      <div className={css.mapWrapper}>
         <Map
           google={google}
-          zoom={15}
+          zoom={14.5}
           style={mapStyles}
           containerStyle={containerStyle}
           initialCenter={center}
           center={center}
         >
           {marker.map((el) => (
-            <Marker position={el} />
+            <Marker position={el} key={el.lat} />
           ))}
         </Map>
       </div>
