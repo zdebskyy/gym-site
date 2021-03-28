@@ -10,7 +10,9 @@ const Header = () => {
       <Layout>
         <div className={styles.container}>
           <div className={styles.logoContainer}>
-            <img src={logo} alt="logo"></img>
+            <NavLink to="/">
+              <img src={logo} alt="logo"></img>
+            </NavLink>
           </div>
           <div>
             <nav>
@@ -34,7 +36,9 @@ const Header = () => {
               </NavLink>
             </nav>
           </div>
-          <a href="" className={styles.phoneUsBtn}>Зателефонуйте нам</a>
+          <a href="" className={styles.phoneUsBtn}>
+            Зателефонуйте нам
+          </a>
         </div>
       </Layout>
     </header>
