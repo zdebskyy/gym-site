@@ -4,7 +4,7 @@ import Layout from "../../components/Layout/Layout";
 import TeamItem from "./TeamItem";
 import description from "../../db/description.json";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import "react-tabs/style/react-tabs.css";
+import "../../react-tabs.css";
 
 const Team = () => {
   console.log(description);
