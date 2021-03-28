@@ -1,5 +1,5 @@
 .header {
-  background-color: #212121;
+  background-color: #263238;
   position: fixed;
   z-index: 1; /* this prevent overlapping fixed header */
   width: 100%;
@@ -12,7 +12,7 @@
   padding: 25px 0;
 }
 
-.logoContainer{
+.logoContainer {
   width: 80px;
   height: 50px;
 }
@@ -22,15 +22,22 @@
   font-size: 16px;
   text-decoration: none;
   color: #fff;
-  opacity: 0.6;
+}
+
+.activeLinkItem {
+  margin-right: 22px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 3px solid #fff;
 }
 
 .linkItem:last-child {
   margin-right: 0;
 }
 
-
-.phoneUsBtn{
+.phoneUsBtn {
   font-size: 14px;
   color: #ffffff;
   font-weight: 700;
@@ -39,4 +46,12 @@
   border: 3px solid #ffffff;
   border-radius: 5px;
   padding: 10px;
+
+  transition: all 200ms linear;
+}
+
+.phoneUsBtn:hover {
+  border: 3px solid #d50000;
+  color: #ffea00;
+  transition: all 200ms linear;
 }
