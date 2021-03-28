@@ -1,0 +1,59 @@
+.react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.react-tabs__tab-list {
+  /* border-bottom: 1px solid black; */
+  background-color: #263238;
+  border-radius: 5px;
+  margin: 0 0 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.react-tabs__tab {
+  list-style: none;
+  padding: 6px 60px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+}
+
+.react-tabs__tab--selected {
+  background: linear-gradient(to right, #eef2f3, #8e9eab);
+  border-color: #aaa;
+  color: black;
+  border-radius: 5px ;
+  font-size: 18px;
+}
+
+.react-tabs__tab--disabled {
+  color: GrayText;
+  cursor: default;
+}
+
+.react-tabs__tab:focus {
+  box-shadow: 0 0 5px hsl(208, 99%, 50%);
+  border-color: hsl(208, 99%, 50%);
+  outline: none;
+}
+
+.react-tabs__tab:focus:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: #fff;
+}
+
+.react-tabs__tab-panel {
+  display: none;
+}
+
+.react-tabs__tab-panel--selected {
+  display: block;
+}
