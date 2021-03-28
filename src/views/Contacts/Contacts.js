@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Contacts.module.css";
 import Layout from "../../components/Layout/Layout";
 import InstagramIcon from "@material-ui/icons/Instagram";

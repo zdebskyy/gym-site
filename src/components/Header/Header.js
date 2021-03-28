@@ -14,14 +14,11 @@ const Header = () => {
               <NavLink to="/" className={styles.linkItem}>
                 Головна сторінка
               </NavLink>
-              <NavLink to="/clubs" className={styles.linkItem}>
-                Наші клуби
-              </NavLink>
               <NavLink to="/prices" className={styles.linkItem}>
                 Наші ціни
               </NavLink>
               <NavLink to="/schedule" className={styles.linkItem}>
-                Розклад
+                Наші клуби та розклад
               </NavLink>
               <NavLink to="/photos" className={styles.linkItem}>
                 Фотогалерея

@@ -10,14 +10,6 @@ export default [
     ),
   },
   {
-    path: "/clubs",
-    label: "Clubs",
-    exact: true,
-    component: lazy(() =>
-      import("../views/Clubs/Clubs" /* webpackChunkName: "Keypad" */)
-    ),
-  },
-  {
     path: "/prices",
     label: "Prices",
     exact: true,
