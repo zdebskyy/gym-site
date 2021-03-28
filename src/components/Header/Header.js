@@ -16,27 +16,52 @@ const Header = () => {
           </div>
           <div>
             <nav>
-              <NavLink to="/" className={styles.linkItem}>
+              <NavLink
+                to="/"
+                className={styles.linkItem}
+                activeClassName={styles.activeLinkItem}
+                exact={true}
+              >
                 Головна сторінка
               </NavLink>
-              <NavLink to="/prices" className={styles.linkItem}>
+              <NavLink
+                to="/prices"
+                className={styles.linkItem}
+                activeClassName={styles.activeLinkItem}
+              >
                 Наші ціни
               </NavLink>
-              <NavLink to="/schedule" className={styles.linkItem}>
+              <NavLink
+                to="/schedule"
+                className={styles.linkItem}
+                activeClassName={styles.activeLinkItem}
+              >
                 Наші клуби та розклад
               </NavLink>
-              <NavLink to="/photos" className={styles.linkItem}>
+              <NavLink
+                to="/photos"
+                className={styles.linkItem}
+                activeClassName={styles.activeLinkItem}
+              >
                 Фотогалерея
               </NavLink>
-              <NavLink to="/team" className={styles.linkItem}>
+              <NavLink
+                to="/team"
+                className={styles.linkItem}
+                activeClassName={styles.activeLinkItem}
+              >
                 Наша команда
               </NavLink>
-              <NavLink to="/contacts" className={styles.linkItem}>
+              <NavLink
+                to="/contacts"
+                className={styles.linkItem}
+                activeClassName={styles.activeLinkItem}
+              >
                 Наші контакти
               </NavLink>
             </nav>
           </div>
-          <a href="" className={styles.phoneUsBtn}>
+          <a href="tel:444444" className={styles.phoneUsBtn}>
             Зателефонуйте нам
           </a>
         </div>
